@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Votação em Tempo Real</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <!-- TELA INICIAL — intro com CTA -->
+    <section class="intro" data-tela="intro">
+      <span class="badge">
+        <span class="badge-dot"></span>
+        Ao vivo
+      </span>
+      <h1 class="intro-pergunta">Qual a melhor linguagem para começar em 2026?</h1>
+      <p class="intro-subtitulo">Sua voz conta. Resultados aparecem em tempo real para todos os participantes.</p>
+      <button class="cta" type="button" data-comecar>
+        <span class="cta-texto" data-cta-texto>Vote agora</span>
+        <span class="cta-seta" aria-hidden="true">→</span>
+      </button>
+      <p class="intro-meta">
+        <span data-total-intro>0</span> pessoas já votaram
+      </p>
+    </section>
+
+    <!-- TELA DE VOTAÇÃO — enquete -->
+    <section class="enquete" data-tela="enquete" hidden>
+      <header class="cabecalho">
+        <span class="badge">
+          <span class="badge-dot"></span>
+          Ao vivo
+        </span>
+        <h1 data-pergunta>Qual a melhor linguagem para começar em 2026?</h1>
+        <p class="subtitulo">Toque na opção que você quer votar.</p>
+      </header>
+
+      <div class="opcoes" data-opcoes aria-live="polite"></div>
+
+      <footer class="rodape">
+        <span class="total">Total: <strong data-total>0</strong> votos</span>
+        <span class="status" data-status></span>
+      </footer>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
